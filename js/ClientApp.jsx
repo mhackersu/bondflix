@@ -1,16 +1,16 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-var ce = React.createElement;
+const ce = React.createElement;
 
-var TheTitle = function(props) {
+const TheTitle = function(props) {
 	return ce('div', null, ce('h1', { style: { color: props.color } }, props.title));
 };
 
-var FirstComponent = function() {
+const FirstComponent = function() {
 	return ce(
 		'div',
-		null,
+		{ id: 'first-component' },
 		ce(TheTitle, { color: 'indigo', title: 'Casino Royale' }),
 		ce(TheTitle, { color: 'indigo', title: 'Dr. No' }),
 		ce(TheTitle, { color: 'indigo', title: 'From Russia with Love' })
