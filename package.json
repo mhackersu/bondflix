@@ -1,8 +1,8 @@
 {
 	"scripts": {
 		"api": "node ratingsAPI.js",
-		"format":
-			"prettier --write --single-quote --print-width=120 --parser=flow --tab-width=4 \"js/**/*.{js,jsx}\""
+		"build": "webpack",
+		"format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=4 \"js/**/*.{js,jsx}\""
 	},
 	"dependencies": {
 		"axios": "0.16.1",
@@ -66,8 +66,7 @@
 	"main": "server.js",
 	"repository": {
 		"type": "git",
-		"url":
-			"git+https://github.com/iammichaelneal/react-redux-router-flow.git"
+		"url": "git+https://github.com/iammichaelneal/react-redux-router-flow.git"
 	},
 	"author": "Michael Neal <iammichaelneal@gmail.com>",
 	"license": "MIT"
