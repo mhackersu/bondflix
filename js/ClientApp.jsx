@@ -1,15 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import FlixTitle from './FlixTitle';
+import { render } from 'react-dom';
 
-const FlixComponent = () => {
-	return (
-		<div>
-			<FlixTitle title="Title Placeholder" color="indigo" />
-			<FlixTitle title="Title Placeholder" color="indigo" />
-			<FlixTitle title="Title Placeholder" color="indigo" />
+const App = () => (
+	<div className="app">
+		<div className="landing">
+			<h1>BondFlix</h1>
+			<input type="text" placeholder="Search" />
+			<a>or Browse All</a>
 		</div>
-	);
-};
+	</div>
+);
 
-ReactDOM.render(<FirstComponent />, document.getElementById('app'));
+render(<App />, document.getElementById('app'));
