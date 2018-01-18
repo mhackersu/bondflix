@@ -1,19 +1,13 @@
 {
-  "name": "react-redux-router-flow",
-  "version": "0.0.1",
-  "description": "React, Redux w/Router & Flow",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iammichaelneal/react-redux-router-flow.git"
-  },
-  "author": "Michael Neal <iammichaelneal@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/iammichaelneal/react-redux-router-flow/issues"
-  },
-  "homepage": "https://github.com/iammichaelneal/react-redux-router-flow#readme"
+	"name": "react-redux-router-flow",
+	"version": "0.0.1",
+	"description": "React, Redux w/Router & Flow",
+	"main": "server.js",
+	"repository": {
+		"type": "git",
+		"url":
+			"git+https://github.com/iammichaelneal/react-redux-router-flow.git"
+	},
+	"author": "Michael Neal <iammichaelneal@gmail.com>",
+	"license": "MIT"
 }
