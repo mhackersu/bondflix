@@ -10,7 +10,9 @@ var FirstComponent = function() {
 	return React.createElement(
 		'div',
 		null,
-		React.createElement('h1', null, 'First Compoment.')
+		React.createElement(Title, null),
+		React.createElement(Title, null),
+		React.createElement(Title, null)
 	);
 };
 
