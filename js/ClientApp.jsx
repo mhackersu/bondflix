@@ -1,11 +1,6 @@
 import React from 'react';
-import { render } from 'react-dom';
-
-const ce = React.createElement;
-
-const TheTitle = function(props) {
-	return ce('div', null, ce('h1', { style: { color: props.color } }, props.title));
-};
+import ReactDOM from 'react-dom';
+import Title from './Title';
 
 const FirstComponent = function() {
 	return ce(
