@@ -1,22 +1,17 @@
-var Title = function() {
-	return React.createElement(
-		'div',
-		null,
-		React.createElement('h1', null, 'Title Component')
-	);
+var ce = React.createElement;
+
+var TheTitle = function(props) {
+	return ce('div', null, ce('h1', null, props.title));
 };
 
 var FirstComponent = function() {
-	return React.createElement(
+	return ce(
 		'div',
 		null,
-		React.createElement(Title, null),
-		React.createElement(Title, null),
-		React.createElement(Title, null)
+		ce(TheTitle, { title: 'Casino Royale' }),
+		ce(TheTitle, { title: 'Dr. No' }),
+		ce(TheTitle, { title: 'From Russia with Love' })
 	);
 };
 
-ReactDOM.render(
-	React.createElement(FirstComponent),
-	document.getElementById('app')
-);
+ReactDOM.render(ce(FirstComponent), document.getElementById('app'));
