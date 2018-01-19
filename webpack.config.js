@@ -31,6 +31,19 @@ module.exports = {
 			{
 				test: /\.jsx?$/,
 				loader: 'babel-loader'
+			},
+			{
+				test: /\.sass?$/,
+				loader: 'style-loader!css-loader!sass-loader',
+				include: path.join(__dirname, 'src', 'styles')
+			},
+			{
+				test: /\.png$$/,
+				loader: 'file-loader'
+			},
+			{
+				test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+				loader: 'file-loader'
 			}
 		]
 	}
