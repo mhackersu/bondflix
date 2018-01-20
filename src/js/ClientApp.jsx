@@ -1,15 +1,18 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { HashRouter, Route } from 'react-router-dom';
+import Landing from './Landing';
+import Search from './Search';
+
 import '../styles/app.sass';
 
 const App = () => (
-	<div className="app">
-		<div className="landing">
-			<h1>BondFlix</h1>
-			<input type="text" placeholder="Search" />
-			<a>Browse All</a>
+	<HashRouter>
+		<div className="app">
+			<Route exact path="/" component={Landing} />
+			<Route path="/search" component={Search} />
 		</div>
-	</div>
+	</HashRouter>
 );
 
 render(<App />, document.getElementById('app'));
