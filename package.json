@@ -2,7 +2,9 @@
 	"scripts": {
 		"api": "node ratingsAPI.js",
 		"build": "webpack",
-		"format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=4 \"js/**/*.{js,jsx}\""
+		"format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=4 \"js/**/*.{js,jsx}\"",
+		"watch": "webpack --watch",
+		"dev": "webpack-dev-server"
 	},
 	"dependencies": {
 		"axios": "0.16.1",
@@ -47,7 +49,7 @@
 		"eslint-loader": "1.7.1",
 		"eslint-plugin-flow": "2.29.1",
 		"eslint-plugin-flowtype": "2.33.0",
-		"eslint-plugin-import": "2.3.0",
+		"eslint-plugin-import": "^2.8.0",
 		"eslint-plugin-jsx-a11y": "5.0.3",
 		"eslint-plugin-prettier": "2.1.1",
 		"eslint-plugin-react": "7.0.1",
@@ -56,6 +58,7 @@
 		"jest": "20.0.4",
 		"jest-serializer-enzyme": "1.0.0",
 		"moxios": "0.4.0",
+		"node-sass": "^4.7.2",
 		"nodemon": "1.11.0",
 		"prettier": "1.7.0",
 		"react-hot-loader": "3.0.0-beta.6",

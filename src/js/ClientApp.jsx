@@ -1,12 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
+import '../styles/app.sass';
 
 const App = () => (
 	<div className="app">
 		<div className="landing">
 			<h1>BondFlix</h1>
 			<input type="text" placeholder="Search" />
-			<a>or Browse All</a>
+			<a>Browse All</a>
 		</div>
 	</div>
 );

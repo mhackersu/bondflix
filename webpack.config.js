@@ -2,7 +2,9 @@ const path = require('path');
 
 module.exports = {
 	context: __dirname,
-	entry: './js/ClientApp.jsx',
+	entry: {
+		main: ['./src/js/ClientApp.jsx']
+	},
 	devtool: 'cheap-eval-source-map',
 	output: {
 		path: path.join(__dirname, 'public'),
