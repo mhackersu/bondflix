@@ -1,4 +1,5 @@
 import React from 'react';
+import { shape, string } from 'prop-types';
 
 const CollectionCard = props => (
 	<div className="collection-card">
@@ -10,5 +11,14 @@ const CollectionCard = props => (
 		</div>
 	</div>
 );
+
+CollectionCard.propTypes = {
+	collection: shape({
+		title: string.isRequired,
+		poster: string.isRequired,
+		budget: string.isRequired,
+		released: string.isRequired
+	}).isRequired
+};
 
 export default CollectionCard;
