@@ -5,7 +5,7 @@ import preload from '../../data.json';
 const Search = () => (
 	<div className="search">
 		{preload.collection007.map(collection => (
-			<CollectionCard collection={collection} />
+			<CollectionCard key={collection.imdb_id} {...collection} />
 		))}
 	</div>
 );
