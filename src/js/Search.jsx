@@ -12,7 +12,6 @@ class Search extends Component {
 	render() {
 		return (
 			<div className="search">
-				<h1>{this.state.searchTerm}</h1>
 				<input
 					onChange={this.handleSearchTermChange}
 					value={this.state.searchTerm}

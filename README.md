@@ -1,4 +1,5 @@
-# React, Redux w/Router & Flow
+# 007 Flix App
+### React, Redux w/Router & Flow
 
 ### Dependencies
 ##### Node.js

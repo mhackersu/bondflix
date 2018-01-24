@@ -3,18 +3,22 @@ import { string } from 'prop-types';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-	width: 32%;
+	width: 300px;
 	border: 2px solid #333;
 	border-radius: 4px;
 	margin-bottom: 25px;
 	padding-right: 10px;
 	overflow: hidden;
+	position: relative;
+	background-color: white;
 `;
 
 const Image = styled.img`
-	width: 46%;
+	width: 120px;
 	float: left;
 	margin-right: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
 `;
 
 const CollectionCard = props => (

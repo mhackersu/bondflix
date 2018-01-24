@@ -5,7 +5,7 @@ import Landing from './Landing';
 import Search from './Search';
 import '../styles/_import.sass';
 
-const FourOhFour = () => <h1>404</h1>;
+const FourZeroFour = () => <h1>404</h1>;
 
 const App = () => (
 	<BrowserRouter>
@@ -13,7 +13,7 @@ const App = () => (
 			<Switch>
 				<Route exact path="/" component={Landing} />
 				<Route path="/search" component={Search} />
-				<Route component={FourOhFour} />
+				<Route component={FourZeroFour} />
 			</Switch>
 		</div>
 	</BrowserRouter>
