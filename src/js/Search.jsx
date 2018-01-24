@@ -12,7 +12,7 @@ class Search extends Component {
 	render() {
 		return (
 			<div className="search">
-				<h1>BondFlix</h1>
+				<h1>{this.state.searchTerm}</h1>
 				<input
 					onChange={this.handleSearchTermChange}
 					value={this.state.searchTerm}
@@ -20,12 +20,21 @@ class Search extends Component {
 					placeholder="Search"
 				/>
 				<div>
-					{preload.collection007.map(collection => (
-						<CollectionCard
-							key={collection.imdb_id}
-							{...collection}
-						/>
-					))}
+					{preload.collection007
+						.filter(
+							collection =>
+								`${collection.title} ${collection.plot}`
+									.toUpperCase()
+									.indexOf(
+										this.state.searchTerm.toUpperCase()
+									) >= 0
+						)
+						.map(collection => (
+							<CollectionCard
+								key={collection.imdb_id}
+								{...collection}
+							/>
+						))}
 				</div>
 			</div>
 		);

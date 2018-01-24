@@ -28,6 +28,7 @@ const CollectionCard = props => (
 			<p>{`Budget ${props.budget}`}</p>
 			<p>{`Released ${props.released}`}</p>
 			<p>{`Actors: ${props.actors}`}</p>
+			<p>{`Plot: ${props.plot}`}</p>
 		</div>
 	</Wrapper>
 );
@@ -37,7 +38,8 @@ CollectionCard.propTypes = {
 	poster: string.isRequired,
 	budget: string.isRequired,
 	released: string.isRequired,
-	actors: string.isRequired
+	actors: string.isRequired,
+	plot: string.isRequired
 };
 
 export default CollectionCard;
