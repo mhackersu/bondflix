@@ -1,40 +1,21 @@
 import React from 'react';
 import { string } from 'prop-types';
-import styled from 'styled-components';
-
-const Wrapper = styled.div`
-	width: 300px;
-	border: 2px solid #333;
-	border-radius: 4px;
-	margin-bottom: 25px;
-	padding-right: 10px;
-	overflow: hidden;
-	position: relative;
-	background-color: white;
-`;
-
-const Image = styled.img`
-	width: 120px;
-	float: left;
-	margin-right: 10px;
-	margin-top: 10px;
-	margin-left: 10px;
-`;
 
 const CollectionCard = props => (
-	<Wrapper>
-		<Image
+	<div className="component-card">
+		<div className="element-title">{props.title}</div>
+		<img
+			className="element-image"
 			alt={`${props.title} Collection Poster`}
 			src={`${props.poster}`}
 		/>
 		<div>
-			<h3>{props.title}</h3>
-			<p>{`Budget ${props.budget}`}</p>
-			<p>{`Released ${props.released}`}</p>
-			<p>{`Actors: ${props.actors}`}</p>
-			<p>{`Plot: ${props.plot}`}</p>
+			<p className="element-plot">{`Plot: ${props.plot}`}</p>
+			<p className="element-actors">{`Actors: ${props.actors}`}</p>
+			<p className="element-budget">{`Budget ${props.budget}`}</p>
+			<p className="element-released">{`Released ${props.released}`}</p>
 		</div>
-	</Wrapper>
+	</div>
 );
 
 CollectionCard.propTypes = {
