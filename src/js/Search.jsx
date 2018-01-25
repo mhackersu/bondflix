@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import CollectionCard from './CollectionCard';
 import preload from '../../data.json';
 
@@ -20,7 +21,9 @@ class Search extends Component {
 						type="text"
 						placeholder="Search"
 					/>
-					<div className="search-title-bar">BondFlix</div>
+					<Link className="search-title-bar" to="/">
+						BondFlix
+					</Link>
 				</div>
 				<div className="container-results">
 					<div className="results-search">
