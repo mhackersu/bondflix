@@ -6,7 +6,8 @@
 			"prettier --write --single-quote --print-width=120 --parser=flow --tab-width=4 \"js/**/*.{js,jsx}\"",
 		"lint": "eslint **/*.{js,jsx} --quiet",
 		"watch": "webpack --watch",
-		"dev": "webpack-dev-server"
+		"dev": "webpack-dev-server",
+		"css": "node-sass src/styles/_import.sass public/style.css"
 	},
 	"dependencies": {
 		"axios": "0.16.1",
@@ -16,6 +17,7 @@
 		"compression": "1.6.2",
 		"cors": "2.8.3",
 		"express": "4.15.3",
+		"extract-text-webpack-plugin": "^3.0.2",
 		"lodash": "4.17.4",
 		"preact": "8.1.0",
 		"preact-compat": "3.16.0",
