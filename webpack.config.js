@@ -5,13 +5,15 @@ module.exports = {
 	entry: {
 		main: ['./src/js/ClientApp.jsx']
 	},
-	devtool: 'cheap-eval-source-map',
+	devtool: 'eval-cheap-source-map',
 	output: {
 		path: path.join(__dirname, 'public'),
 		filename: 'bundle.js'
 	},
 	devServer: {
-		publicPath: '/public/',
+		devMiddleware: {
+			publicPath: '/public/',
+		},
 		historyApiFallback: true
 	},
 	resolve: {
@@ -36,7 +38,11 @@ module.exports = {
 			},
 			{
 				test: /\.sass?$/,
-				loader: 'style-loader!css-loader!sass-loader',
+				use: [
+					'style-loader',
+					'css-loader',
+					'sass-loader'
+					],
 				include: path.join(__dirname, 'src', 'styles')
 			},
 			{

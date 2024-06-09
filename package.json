@@ -35,5 +35,9 @@
 		"url": "git+https://github.com/mhackersu/bondflix"
 	},
 	"author": "Mike Hacker <mhackersu@gmail.com>",
-	"license": "MIT"
+	"license": "MIT",
+	"devDependencies": {
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^5.0.4"
+	}
 }
