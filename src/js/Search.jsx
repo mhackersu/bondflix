@@ -30,7 +30,8 @@ class Search extends Component {
 				</div>
 				<div className="container-results">
 					<div className="results-search">
-						{preload.collection007.filter((collection =>
+						{preload.collection007.filter((
+							collection =>
 							`${collection.title} ${collection.plot}`.toUpperCase()
 							.indexOf(this.state.searchTerm.toUpperCase()) >= 0)
 							.map(collection => (
@@ -44,7 +45,7 @@ class Search extends Component {
 									votes={collection.votes} 
 									director={collection.director}
 								/>
-							))}
+							)))}
 					</div>
 				</div>
 			</div>
