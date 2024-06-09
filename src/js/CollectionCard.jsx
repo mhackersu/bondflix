@@ -1,7 +1,7 @@
 import React from 'react';
 import { string } from 'prop-types';
 
-const CollectionCard = props => (
+const CollectionCard = (props) => (
 	<div className="component-card">
 		<div className="element-title">{props.title}</div>
 		<img
