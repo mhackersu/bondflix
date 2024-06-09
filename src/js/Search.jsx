@@ -33,16 +33,18 @@ class Search extends Component {
 						{preload.collection007.filter((collection =>
 							`${collection.title} ${collection.plot}`.toUpperCase()
 							.indexOf(this.state.searchTerm.toUpperCase()) >= 0)
-							.map(collection =>(<CollectionCard 
-							  key={collection.imdb_id} 
-							  title={collection.title} 
-							  genre={collection.genre} 
-							  year={collection.year} 
-							  poster={collection.poster} 
-							  rating={collection.rating} 
-							  votes={collection.votes} 
-							  director={collection.director} />))
-						}
+							.map(collection => (
+								<CollectionCard 
+									key={collection.imdb_id} 
+									title={collection.title} 
+									genre={collection.genre} 
+									year={collection.year} 
+									poster={collection.poster} 
+									rating={collection.rating} 
+									votes={collection.votes} 
+									director={collection.director}
+								/>
+							))}
 					</div>
 				</div>
 			</div>
