@@ -5,11 +5,13 @@ import preload from '../../data.json';
 
 class Search extends Component {
 	state = {
-		searchTerm: ''
+		searchTerm: '',
 	};
-	handleSearchTermChange = event => {
+
+	handleSearchTermChange = (event) => {
 		this.setState({ searchTerm: event.target.value });
 	};
+
 	render() {
 		return (
 			<div className="search">
@@ -28,20 +30,10 @@ class Search extends Component {
 				<div className="container-results">
 					<div className="results-search">
 						{preload.collection007
-							.filter(
-								collection =>
-									`${collection.title} ${collection.plot}`
-										.toUpperCase()
-										.indexOf(
-											this.state.searchTerm.toUpperCase()
-										) >= 0
-							)
-							.map(collection => (
-								<CollectionCard
-									key={collection.imdb_id}
-									{...collection}
-								/>
-							))}
+							.filter
+								(collection =>`${collection.title} ${collection.plot}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0)
+							.map
+								(collection => (<CollectionCard key={collection.imdb_id}{...collection}/>))}
 					</div>
 				</div>
 			</div>

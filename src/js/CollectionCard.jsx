@@ -1,19 +1,19 @@
 import React from 'react';
 import { string } from 'prop-types';
 
-const CollectionCard = (props) => (
+const CollectionCard = ({ title, poster, plot, actors, budget, released }) => (
 	<div className="component-card">
-		<div className="element-title">{props.title}</div>
+		<div className="element-title">{title}</div>
 		<img
 			className="element-image"
-			alt={`${props.title} Collection Poster`}
-			src={`${props.poster}`}
+			alt={`${title} Collection Poster`}
+			src={`${poster}`}
 		/>
 		<div>
-			<p className="element-plot">{`Plot: ${props.plot}`}</p>
-			<p className="element-actors">{`Actors: ${props.actors}`}</p>
-			<p className="element-budget">{`Budget ${props.budget}`}</p>
-			<p className="element-released">{`Released ${props.released}`}</p>
+			<p className="element-plot">{`Plot: ${plot}`}</p>
+			<p className="element-actors">{`Actors: ${actors}`}</p>
+			<p className="element-budget">{`Budget ${budget}`}</p>
+			<p className="element-released">{`Released ${released}`}</p>
 		</div>
 	</div>
 );
@@ -24,7 +24,7 @@ CollectionCard.propTypes = {
 	budget: string.isRequired,
 	released: string.isRequired,
 	actors: string.isRequired,
-	plot: string.isRequired
+	plot: string.isRequired,
 };
 
 export default CollectionCard;
