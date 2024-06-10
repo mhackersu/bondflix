@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CollectionCard from './CollectionCard';
 
 class Search extends React.Component {
@@ -12,8 +13,9 @@ class Search extends React.Component {
 	};
 
 	filterCollections = () => {
+		const { collections } = this.props; // Destructure props
 		const { searchTerm } = this.state; // Destructure state
-		return this.props.collections.filter(
+		return collections.filter(
 			(collection) =>
 				`${collection.title} ${collection.plot}`
 					.toUpperCase()
@@ -22,10 +24,9 @@ class Search extends React.Component {
 	};
 
 	render() {
-		const { searchTerm } = this.state; // Destructure state for rendering
 		return (
 			<div>
-				<input type='text' onChange={this.handleChange} />
+				<input type="text" onChange={this.handleChange} />
 				<div>
 					{this.filterCollections().map((collection) => (
 						<CollectionCard
@@ -44,5 +45,21 @@ class Search extends React.Component {
 		);
 	}
 }
+
+Search.propTypes = {
+	collections: PropTypes.arrayOf(
+		PropTypes.shape({
+			imdb_id: PropTypes.string.isRequired,
+			title: PropTypes.string.isRequired,
+			plot: PropTypes.string.isRequired,
+			genre: PropTypes.string,
+			year: PropTypes.number,
+			poster: PropTypes.string,
+			rating: PropTypes.string,
+			votes: PropTypes.number,
+			director: PropTypes.string,
+		}),
+	).isRequired,
+};
 
 export default Search;
