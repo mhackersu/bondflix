@@ -9,9 +9,9 @@ export default async function HomePage() {
     <div>
       <title>{data.title}</title>
       <h1 className="text-4xl font-bold tracking-tight">{data.headline}</h1>
-      <Link to="/collection" className="mt-4 inline-block underline">
-        <p>{data.body}</p>
-      </Link>
+      <a className="mt-4 inline-block underline">
+        <a target="_blank" href="https://www.youtube.com/watch?v=U6YTbp9P-gA&list=PLDbiFUm7nzNjAtyvr6KI7kGZI_5eIo4gx&ab_channel=AvengedS939-TheJamesBondNetwork">{data.body}</a>
+      </a>
       {/*<Counter />*/}
 {/*      <Link to="/about" className="mt-4 inline-block underline">
         About Bondflix
