@@ -1,6 +1,5 @@
 import { Link } from 'waku';
 
-import { Collection } from '../components/collection';
 // import { Counter } from '../components/counter';
 
 export default async function HomePage() {
@@ -15,10 +14,10 @@ export default async function HomePage() {
       </a>
       {/*<Counter />*/}
       <br></br>
-      <Collection />
-      {/*<Link to="/collection" className="mt-4 inline-block underline">*/}
-        {/*{data.button}*/}
-      {/*</Link>*/}
+      {/*<Gallery />*/}
+      <Link to="/gallery" className="mt-4 inline-block underline">
+        {data.button}
+      </Link>
     </div>
   );
 }
@@ -29,7 +28,7 @@ const getData = async () => {
     headline: 'Bondflix',
     body: 'Browse the title sequences',
     hyperlink: 'https://www.youtube.com/watch?v=U6YTbp9P-gA&list=PLDbiFUm7nzNjAtyvr6KI7kGZI_5eIo4gx&ab_channel=AvengedS939-TheJamesBondNetwork',
-    button: 'Browse the collection',
+    button: 'Browse the gallery',
   };
 
   return data;

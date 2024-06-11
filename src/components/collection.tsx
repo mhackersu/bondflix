@@ -1,9 +1,8 @@
-'use client'
+// server component
+import db from 'collection';
 
-export const Collection = () => {
-	return (
-		<div>
-			<p>collection world</p>
-		</div>
-	);
+export const Collection = async () => {
+	const titles = await db.query('SELECT * FROM title');
+
+	return <Collection titles={titles} />;
 };
