@@ -1,6 +1,6 @@
 {
-  "name": "waku",
-  "version": "0.0.0",
+  "name": "Bondflix",
+  "version": "0.2.0",
   "type": "module",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "start": "waku start"
   },
   "dependencies": {
+    "json-loader": "^0.5.7",
     "react": "19.0.0-beta-e7d213dfb0-20240507",
     "react-dom": "19.0.0-beta-e7d213dfb0-20240507",
     "react-server-dom-webpack": "19.0.0-beta-e7d213dfb0-20240507",
