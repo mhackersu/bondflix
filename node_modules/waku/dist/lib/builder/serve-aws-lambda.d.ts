@@ -1,1 +1,0 @@
-export declare const handler: (event: import("hono/aws-lambda").LambdaEvent, lambdaContext?: import("hono/aws-lambda").LambdaContext | undefined) => Promise<import("hono/aws-lambda").APIGatewayProxyResult>;
