@@ -1,8 +1,18 @@
-
-import db from 'collection';
-
 export const Collection = () => {
-	// const titles = await db.query('SELECT * FROM title');
-	// return <Collection titles={titles} />;
-	return(<div>hello collection</div>);
+	const data = getCollection();
+	return(
+		<div>
+			<p>hello collection</p>
+			<p>{data.title}</p>
+		</div>
+	);
 };
+
+const getCollection = () => {
+	// const data = '../data.json';
+	const data = {
+		title: 'data collection',
+	};
+
+	return data;
+}

@@ -5,7 +5,9 @@ import { Collection } from '../components/collection';
 export default function GalleryPage() {
   return (
     <div>
-    gallery world
+      <p>
+        gallery world
+      </p>
     <Collection />
     </div>
   );
