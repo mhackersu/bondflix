@@ -1,17 +1,12 @@
-import { Link } from 'waku';
+'use client';
 
-export default async function GalleryPage() {
-  // const data = await getData();
+import { Collection } from '../components/collection';
 
+export default function GalleryPage() {
   return (
     <div>
     gallery world
+    <Collection />
     </div>
   );
 }
-
-export const getConfig = async () => {
-  return {
-    render: 'static',
-  };
-};

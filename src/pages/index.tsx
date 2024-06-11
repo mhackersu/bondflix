@@ -1,6 +1,5 @@
 import { Link } from 'waku';
-
-// import { Counter } from '../components/counter';
+import { Counter } from '../components/counter';
 
 export default async function HomePage() {
   const data = await getData();
@@ -12,7 +11,7 @@ export default async function HomePage() {
       <a className="mt-4 inline-block underline">
         <a target="_blank" href={data.hyperlink}>{data.body}</a>
       </a>
-      {/*<Counter />*/}
+      <Counter />
       <br></br>
       {/*<Gallery />*/}
       <Link to="/gallery" className="mt-4 inline-block underline">
