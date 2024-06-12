@@ -18,12 +18,13 @@ const getCollection = () => {
 	// };
 
 	// return data;
-	// return mydata;
+	return collection_data;
 }
 
 export class Collection extends React.Component {
     render() {
-        const { data } = this.props.collection_data;
+        // const { data } = this.props.collection_data;
+        const data = getCollection();
         return (
             // <div>
             //     {
@@ -33,9 +34,9 @@ export class Collection extends React.Component {
             //     }
             // </div>
 			<div>
-			  {this.props.collection_data.data.map((e, i) => 
+			  {this.props.data.map((e, i) => 
 			    // <SomeComponent key={i} item={e} />
-			    <SomeComponent key={i} label={e.label} value={e.value} />
+			    <SomeComponent key={i} title={e.title} />
 			  )}
 			</div>
         )
