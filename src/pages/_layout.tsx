@@ -25,7 +25,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 
 const getData = async () => {
   const data = {
-    description: 'An internet website!',
+    description: 'Bondflix - A Netflix Clone Project',
     icon: '/images/favicon.png',
   };
 
