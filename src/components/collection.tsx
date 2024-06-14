@@ -2,16 +2,6 @@ import collection_data from '../data.json';
 
 import React, { Component } from 'react';
 
-// export const Collection = () => {
-// 	// const data = getCollection();
-// 	return(
-// 		<div>
-// 			<p>hello collection</p>
-// 			{/*<p>{data.title}</p>*/}
-// 		</div>
-// 	);
-// };
-
 const getCollection = () => collection_data;
 
 const PresentCollection = ({ title }: { title: string }) => {
