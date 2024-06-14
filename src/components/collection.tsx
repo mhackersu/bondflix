@@ -12,42 +12,19 @@ import React, { Component } from 'react';
 // 	);
 // };
 
-const getCollection = () => {
-    return collection_data;
-}
+const getCollection = () => collection_data;
 
-class PresentCollection extends React.Component<{title: string}> {
-    render() {
-        return <p>{this.props.title}</p>;
-    }
-}
+const PresentCollection = ({ title }: { title: string }) => {
+    return <p>{title}</p>
+};
 
-export class Collection extends React.Component {
-    render() {
-        // const { data } = this.props.collection_data;
-        const data = getCollection();
-        return (
-
-            // <div>
-            //     {
-            //       Object.keys(data).map((e, i) => {
-            //         <SomeComponent key={i} {...e} />
-            //       })
-            //     }
-            // </div>
-
-			// <div>
-			  // {this.props.data.map((e, i) => 
-			    // <SomeComponent key={i} item={e} />
-			    // <SomeComponent key={i} title={e.title} />
-			  // )}
-			// </div>
-
+export const Collection = () => {
+    const data = getCollection();
+    return (
             <div>
-                {data.map((e: {title: string}, i: number) =>
-                          <PresentCollection key={i} title={e.title} />
-                )}
+                {data.map((e: {title: string}, i: number) => (
+                    <PresentCollection key={i} title={e.title} />
+                ))}
             </div>
-        )
-    }
-}
+    );
+};
