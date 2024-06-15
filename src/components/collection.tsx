@@ -2,6 +2,7 @@ import collection_data from '../collection.json';
 import React, { Component } from 'react';
 
 type CollectionItem = {
+    id: string;
     imdb_id: string;
     title: string;
     year: string;
@@ -32,12 +33,18 @@ const getCollection = (): CollectionItem[] => collection_data.collection;
 
 const PresentCollection = ({ item }: { item: CollectionItem }) => {
     return (
-        <div className="collection-card">
-            <p className="collection-card-title">{item.title}</p>
-            <img src={item.poster} alt={item.title} />
-            <p className="collection-card-plot">{item.plot}</p>
-            <a className="collection-card-title-seq" href={item.sequence} target="window">Title Sequence</a>
-            <p className="collection-card-released">{item.released}</p>
+        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+            <a href={item.sequence} className="group">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                <img
+                  src={item.poster}
+                  alt={item.title}
+                  className="h-full w-full object-cover object-center group-hover:opacity-75"
+                />
+              </div>
+              <h3 className="mt-4 text-sm text-gray-700">{item.title}</h3>
+              <p className="mt-1 text-lg font-medium text-gray-900">{item.year}</p>
+            </a>
         </div>
     );
 };
@@ -47,7 +54,7 @@ export const Collection = () => {
     return (
         <div>
             {data.map((item, index) => (
-                <PresentCollection key={item.imdb_id} item={item} />
+                <PresentCollection key={item.id} item={item} />
             ))}
         </div>
     );
