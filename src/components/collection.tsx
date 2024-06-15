@@ -1,7 +1,6 @@
 import collection_data from '../collection.json';
 import React, { Component } from 'react';
 
-// Define the appropriate type for the collection items
 type CollectionItem = {
     imdb_id: string;
     title: string;
@@ -26,17 +25,19 @@ type CollectionItem = {
     production: string;
     type: string;
     status: string;
+    sequence: string;
 };
 
-// Adjust getCollection function to retrieve the correct array from collection_data
 const getCollection = (): CollectionItem[] => collection_data.collection;
 
 const PresentCollection = ({ item }: { item: CollectionItem }) => {
     return (
-        <div>
-            <h2>{item.title} ({item.year})</h2>
+        <div className="collection-card">
+            <p className="collection-card-title">{item.title}</p>
             <img src={item.poster} alt={item.title} />
-            <p>{item.plot}</p>
+            <p className="collection-card-plot">{item.plot}</p>
+            <a className="collection-card-title-seq" href={item.sequence} target="window">Title Sequence</a>
+            <p className="collection-card-released">{item.released}</p>
         </div>
     );
 };
