@@ -1,32 +1,45 @@
 .component-card {
-  width: 260px;
-  border: 2px solid #333;
-  border-radius: 4px;
-  margin-bottom: 25px;
-  padding-right: 10px;
-  position: relative;
-  background-color: white; }
-  .component-card .element-image {
-    width: auto;
-    position: relative;
-    float: center;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-left: 10px; }
-  .component-card .element-plot {
-    font-size: 65%; }
-  .component-card .element-released {
-    font-size: 70%;
-    font-weight: bolder;
-    margin-left: 10px; }
-  .component-card .element-title {
-    font-weight: bold;
-    margin-top: 10px;
-    margin-left: 10px; }
-  .component-card .element-budget {
-    font-size: 70%;
-    font-weight: bolder;
-    margin-left: 10px; }
-  .component-card .element-actors {
-    font-size: 70%;
-    margin-left: 10px; }
+  width: 260px
+  border: 2px solid #333
+  border-radius: 4px
+  margin-bottom: 25px
+  padding-right: 10px
+  position: relative
+  background-color: white
+
+  .element-image {
+    width: auto
+    position: relative
+    float: center
+    margin-right: 10px
+    margin-top: 10px
+    margin-left: 10px
+  }
+
+  .element-plot {
+    font-size: 65%  // Corrected to use tabs
+  }
+
+  .element-released {
+    font-size: 70%
+    font-weight: bolder
+    margin-left: 10px
+  }
+
+  .element-title {
+    font-weight: bold
+    margin-top: 10px
+    margin-left: 10px
+  }
+
+  .element-budget {
+    font-size: 70%
+    font-weight: bolder
+    margin-left: 10px
+  }
+
+  .element-actors {
+    font-size: 70%
+    margin-left: 10px
+  }
+}

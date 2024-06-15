@@ -11,7 +11,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   const data = await getData();
 
   return (
-    <div className="font-['Nunito']">
+    <div className="">
       <meta property="description" content={data.description} />
       <link rel="icon" type="image/png" href={data.icon} />
       {/*<Header />*/}
@@ -25,7 +25,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 
 const getData = async () => {
   const data = {
-    description: 'Bondflix - A Netflix Clone Project',
+    description: 'Curator dot art - A Film Gallery Art Collection Project',
     icon: '/images/favicon.png',
   };
 
