@@ -34,15 +34,15 @@ const getCollection = (): CollectionItem[] => collection_data.collection;
 const PresentCollection = ({ item }: { item: CollectionItem }) => {
     return (
         <div className="">
-            <a href={item.sequence} target="window" className="">
-              <div className="">
+            <a className="">
+              <a href={item.sequence} target="window"className="">
                 <img
                   src={item.poster}
                   alt={item.title}
                   className=""
                 />
-              </div>
-              <p className="">{item.title}</p>
+              </a>
+              <h2 className="">{item.title}</h2>
               <p className="">{item.year}</p>
             </a>
         </div>
