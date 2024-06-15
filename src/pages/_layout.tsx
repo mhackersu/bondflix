@@ -8,10 +8,10 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   const data = await getData();
 
   return (
-    <div className="gallery">
+    <div>
       <meta property="description" content={data.description} />
       <link rel="icon" type="image/png" href={data.icon} />
-      <main className="">
+      <main>
         {children}
       </main>
     </div>

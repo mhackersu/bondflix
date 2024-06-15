@@ -8,7 +8,7 @@ export default async function AboutPage() {
       <title>{data.title}</title>
       <h1 className="">{data.headline}</h1>
       <p>{data.body}</p>
-      <Link to="/" className="">
+      <Link to="/">
         Return home
       </Link>
     </div>
