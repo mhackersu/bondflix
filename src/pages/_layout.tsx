@@ -2,9 +2,6 @@ import '../styles.css';
 
 import type { ReactNode } from 'react';
 
-// import { Header } from '../components/header';
-// import { Footer } from '../components/footer';
-
 type RootLayoutProps = { children: ReactNode };
 
 export default async function RootLayout({ children }: RootLayoutProps) {
@@ -14,11 +11,9 @@ export default async function RootLayout({ children }: RootLayoutProps) {
     <div className="">
       <meta property="description" content={data.description} />
       <link rel="icon" type="image/png" href={data.icon} />
-      {/*<Header />*/}
       <main className="">
         {children}
       </main>
-      {/*<Footer />*/}
     </div>
   );
 }
