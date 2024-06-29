@@ -1,7 +1,7 @@
-import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
-import { stylexPlugin } from 'vite-plugin-stylex-dev';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-/** @type {import('vite').UserConfig} */
-export default {
-  plugins: [vanillaExtractPlugin(), stylexPlugin()],
-};
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+})
